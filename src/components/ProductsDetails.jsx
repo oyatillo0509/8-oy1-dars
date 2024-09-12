@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// Sample data array (replace with actual data fetching)
 const data = [
   {
     brand: "Ferrari",
@@ -13,7 +12,6 @@ const data = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/6/6d/Ferrari_SF90_Stradale_2020.jpg",
   },
-  // Add more products here
 ];
 
 function ProductDetails() {
@@ -21,7 +19,6 @@ function ProductDetails() {
   const navigate = useNavigate();
   const isDarkMode = useSelector((state) => state.theme.darkMode);
 
-  // Find the product based on the model from the URL
   const product = data.find((item) => item.model === model);
 
   return (

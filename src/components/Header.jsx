@@ -18,12 +18,10 @@ function Header({ texts }) {
   return (
     <header className={`${themeClasses} w-full transition duration-300`}>
       <div className="container mx-auto w-[1200px] p-4 flex justify-between items-center">
-        {/* Logo */}
         <a href="/" className="flex items-center">
           <img src={logo} alt="Logo" className="w-32 h-auto" />
         </a>
 
-        {/* Navigation */}
         <nav>
           <ul className="flex space-x-8">
             <li>
@@ -44,7 +42,6 @@ function Header({ texts }) {
           </ul>
         </nav>
 
-        {/* Actions: Language Switch, Theme Toggle, and Button */}
         <div className="flex items-center space-x-4">
           {/* Language Switch */}
           <select
@@ -60,14 +57,12 @@ function Header({ texts }) {
             <option value="ru">Russian</option>
           </select>
 
-          {/* Theme Toggle */}
           <label className="swap swap-rotate">
             <input
               type="checkbox"
               onChange={handleThemeToggle}
               checked={isDarkMode}
             />
-            {/* Sun Icon */}
             <svg
               className={`swap-off h-7 w-7 fill-current transition-all ${
                 !isDarkMode ? "" : "hidden"
@@ -77,7 +72,6 @@ function Header({ texts }) {
             >
               <path d="M12 3V1M12 23v-2M4.22 4.22l-1.42-1.42M20.8 20.8l-1.42-1.42M1 12h2M23 12h2M4.22 19.78l-1.42 1.42M20.8 3.22l-1.42 1.42" />
             </svg>
-            {/* Moon Icon */}
             <svg
               className={`swap-on h-7 w-7 fill-current transition-all ${
                 isDarkMode ? "" : "hidden"
@@ -89,7 +83,6 @@ function Header({ texts }) {
             </svg>
           </label>
 
-          {/* Clone Button */}
           <button className="px-4 py-2 rounded-full bg-purple-600 text-white font-semibold hover:bg-purple-700 transition duration-300">
             {texts.clone}
           </button>
